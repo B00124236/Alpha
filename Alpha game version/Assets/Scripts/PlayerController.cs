@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         MovePlayer();
 
-        ConstrainPlayersPosition();
+        ConstrainsPlayersPosition();
     }
 
     //Player is moved by arrow keys back, forward, left to right visa versa
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     }
 
     //Keeps player in certain space with invisable walls
-    void ConstrainPlayersPosition()
+    void ConstrainsPlayersPosition()
     {
         if (transform.position.z < -zBound)
         {
