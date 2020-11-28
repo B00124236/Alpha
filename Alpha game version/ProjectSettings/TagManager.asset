@@ -4,10 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Powerups
-  - New tag
+  - Undefined
+  - Eliminate
   - Trump
-  - Coronavirus
   layers:
   - Default
   - TransparentFX
@@ -17,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - PostProcessing
   - 
   - 
   - 

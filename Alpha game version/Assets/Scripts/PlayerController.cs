@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float pace = 10.0f;
-    private float zBound = 4;
+    private float pace = 20.0f;
+    private float zBound = 0.2f;
     private Rigidbody playersRb;
 
     // Start is called before the first frame update
@@ -26,9 +26,7 @@ public class PlayerController : MonoBehaviour
     void MovePlayer()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-
-        playersRb.AddForce(Vector3.forward * pace * verticalInput);
+       
         playersRb.AddForce(Vector3.right * pace * horizontalInput);
     }
 
@@ -46,4 +44,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Trump"))
+        {
+            Debug.Log("Player has hit Trump"); 
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Eliminate"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
 }
