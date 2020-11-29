@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float pace = 20.0f;
-    private float zBound = 0.2f;
+    private float pace = 30.0f;
+    private float zBound = 0.5f;
     private Rigidbody playersRb;
 
     // Start is called before the first frame update
